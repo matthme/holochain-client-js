@@ -112,12 +112,12 @@ export interface HoloHashed<T> {
  * @public
  */
 export interface NetworkInfo {
-    fetch_queue_info: FetchQueueInfo;
+    fetch_pool_info: FetchPoolInfo;
 }
 /**
  * @public
  */
-export interface FetchQueueInfo {
+export interface FetchPoolInfo {
     op_bytes_to_fetch: number;
     num_ops_to_fetch: number;
 }
