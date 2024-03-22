@@ -1,4 +1,6 @@
+/// <reference types="ws" />
 import { RoleName } from "../types.js";
+import { IsoWebSocket } from "./client.js";
 export declare const DEFAULT_TIMEOUT = 60000;
 /**
  * @public
@@ -79,6 +81,10 @@ export declare class CloneId {
     getBaseRoleName(): string;
 }
 /**
+ * @public
+ */
+export type WsClientOptions = Pick<IsoWebSocket.ClientOptions, "origin">;
+/**
  * Options for a Websocket connection.
  *
  * @public
@@ -96,7 +102,4 @@ export interface WebsocketConnectionOptions {
      * Timeout to default to for all operations.
      */
     defaultTimeout?: number;
-}
-export interface WsClientOptions {
-    origin: string | undefined;
 }
